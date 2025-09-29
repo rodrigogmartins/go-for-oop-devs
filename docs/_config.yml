@@ -1,0 +1,18 @@
+# Site settings
+title: GO 4 OOP Devs
+description: Documentation for the OOP Devs that are starting to work with GO
+
+# Use remote theme instead of local gem
+remote_theme: pmarsceill/just-the-docs
+plugins:
+  - jekyll-remote-theme
+
+# Color mode settings
+enable_dark_mode: true
+color_scheme: dark
+color_mode_toggle: true
+
+# Just the Docs specific settings
+just_the_docs:
+  sidebar:
+    navigation: "_sidebar.md"

@@ -1,0 +1,6 @@
+- [Home](/)
+- [💡 Key Mental Shifts](01_key-mental-shifts.md)
+- [🧰 Pro Tips for Writing Idiomatic Go](02_pro-tips-for-writing-idiomatic-go.md)
+- [🚧 Common Pitfalls for OOP Developers](03_common-pitfalls-for-oop-developers.md)
+- [🧭 Migration Checklist — From Java (OOP) to Go 🦫](04_migration-checklist--from-java-oop-to-go.md)
+- [📚 References & Further Reading](05_references-further-reading.md)
