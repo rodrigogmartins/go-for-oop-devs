@@ -1,6 +1,6 @@
 # Site settings
-title: GO 4 OOP Devs
-description: Documentation for the OOP Devs that are starting to work with GO
+title: Go for OOP Devs
+description: Documentation for the OOP Devs that are starting to work with Go
 
 # Use remote theme instead of local gem
 remote_theme: pmarsceill/just-the-docs

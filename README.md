@@ -12,16 +12,17 @@ Go isn’t OOP — it’s **simple, pragmatic, and compositional**.
 
 Embrace **structs, interfaces, and composition**, and you’ll write **cleaner, faster, and more maintainable** systems.
 
-## 🌐 Access the Documentation Page
-
-This documentation breaks down concepts, idiomatic patterns, and migration tips in a way that's easy to grasp for developers coming from Java, C#, or other OOP backgrounds.
-
-
 ## ⭐ Support This Project
 
 If you found this project useful or learned something from it, consider giving it a ⭐ on GitHub!  
 
 Your support helps keep this project alive and encourages more improvements. Thank you! 🙏
+
+## [🌐 Access the Documentation Page](https://rodrigogmartins.github.io/go-for-oop-devs/)
+
+This documentation breaks down concepts, idiomatic patterns, and migration tips in a way that's easy to grasp for developers coming from Java, C#, or other OOP backgrounds.
+
+Docs webpage link: [**Go for OOP Developers**](https://rodrigogmartins.github.io/go-for-oop-devs/)
 
 ## 📚 References & Further Reading
 

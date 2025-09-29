@@ -1,9 +1,9 @@
 ---
-title: 🧠 Go Mindset for OOP Developers
+title: 🧠 Go for OOP Developers
 nav_order: 0
 ---
 
-# 🧠 Go Mindset for OOP Developers
+# 🧠 Go for OOP Developers
 
 A quick guide for developers transitioning from Object-Oriented languages (like Java, C#, or C++) to Go.
 
