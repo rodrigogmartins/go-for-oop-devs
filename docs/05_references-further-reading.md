@@ -5,14 +5,6 @@ nav_order: 5
 
 # 📚 References & Further Reading
 
-## 📘 Table of Contents
-
-- [**1. 🦫 Official & Foundational Resources**](#1--official--foundational-resources)
-- [**2. 🧠 Design Philosophy & Best Practices**](#2--design-philosophy--best-practices)
-- [**3. 🧰 Practical Guides for OOP Developers**](#3--practical-guides-for-oop-developers)
-- [**4. 🧪 Testing & Concurrency**](#4--testing--concurrency)
-- [**5. 📁 Project Structure Inspiration**](#5--project-structure-inspiration)
-
 ## 1. 🦫 Official & Foundational Resources
 
 - [**The Go Programming Language Tour**](https://tour.golang.org/) — The official interactive introduction to Go, from syntax to concurrency.

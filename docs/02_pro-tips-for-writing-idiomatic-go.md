@@ -5,14 +5,19 @@ nav_order: 2
 
 # 🧰 Pro Tips for Writing Idiomatic Go
 
-## 📘 Table of Contents
+## General Best Practices
 
-- [**1. 🧠 Code Design**](#1--code-design)
-- [**2. 📦Data and Pointers**](#2--data-and-pointers)
-- [**3. 🧱 Structs as "Classes"**](#3--structs-as-classes)
-- [**4. 🧩 Interfaces**](#4--interfaces)
-- [**5. 🧠 Error Handling**](#5--error-handling)
-- [**6. 🔄 Concurrency**](#6--concurrency)
+- 🧭 Follow Go naming conventions:
+
+  - Exported names **start with capital letters**.
+
+  - Keep names **short and descriptive**.
+
+- 📂 Organize code by **domain/package**, not layers.
+
+- 🧪 Always test! Use `testing` package and keep tests in `*_test.go` files.
+
+- ⚙️ Use `go fmt`, `go vet`, and `golangci-lint`.
 
 ## 1. 🧠 Code Design
 

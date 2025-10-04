@@ -7,18 +7,6 @@ nav_order: 0
 
 A quick guide for developers transitioning from Object-Oriented languages (like Java, C#, or C++) to Go.
 
----
-
-## 📘 Table of Contents
-
-- [**1. 🚀 Introduction**](#1--introduction)
-- [**2. 🧭 Summary**](#2--summary)
-- [**3. 🔄 OOP vs Go: Conceptual Shifts**](#3--oop-vs-go-conceptual-shifts)
-- [**4. 🧰 General Best Practices**](#4--general-best-practices)
-- [**5. 🤝 Collaboration & Contributions**](#5--collaboration--contributions)
-
-## 1. 🚀 Introduction
-
 If you come from an Object-Oriented Programming (OOP) background, Go might initially feel minimalistic or even “too simple”.
 You may look for familiar constructs like classes, inheritance, annotations, generics, or frameworks, and not find them the same way.
 
@@ -26,48 +14,310 @@ But Go is designed with clarity, simplicity, and explicitness in mind — tradin
 
 This guide highlights the main paradigm shifts you’ll encounter and provides pro-tips for writing idiomatic Go code.
 
-## 2. 🧭 Summary
+## 🔄 OOP vs Go: Conceptual Shifts
 
-Go isn’t OOP — it’s **simple, pragmatic, and compositional**.
+### Classes
 
-Embrace **structs, interfaces, and composition**, and you’ll write **cleaner, faster, and more maintainable** systems.
+**Java (OOP)**  
 
-## 3. 🔄 OOP vs Go: Conceptual Shifts
+- Blueprint that encapsulates data + behavior
+- Example:
 
-| Concept                  | In OOP (e.g., Java)                                | In Go (Golang)                                                                          |
-| ------------------------ | -------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Classes                  | Blueprints that encapsulate data + behavior        | No classes. Use struct to model data and functions with receivers to attach behavior    |
-| Inheritance              | Core mechanism for reuse and polymorphism          | No inheritance. Use composition and interfaces instead                                  |
-| Interfaces               | Declared and implemented explicitly via implements | Implicit implementation: any type that has the required methods satisfies the interface |
-| Access Modifiers         | public, private, protected keywords                | Simplicity: Capitalized = exported (public), lowercase = unexported (private)           |
-| Constructors             | Defined by name of class                           | Use factory functions, e.g. NewSomething()                                              |
-| Annotations / Reflection | Commonly used for frameworks                       | Rarely used — prefer explicit configuration                                             |
-| Exceptions               | Error handling via try/catch                       | No exceptions. Handle errors via explicit error returns                                 |
-| Framework-driven         | Heavy reliance on frameworks (Spring, etc.)        | Go prefers libraries + composition, not frameworks                                      |
-| Generics                 | Widely used                                        | Go supports generics (since 1.18), but encourages simple concrete types where possible  |
-| Dependency Injection     | Automated by frameworks                            | Manual DI via constructors or function parameters                                       |
-| Multithreading           | Threads, executors, futures                        | Lightweight goroutines and channels for concurrency                                     |
+```java
+  class Person {
+    private String name;
+    public Person(String name) { this.name = name; }
+    public String getName() { return name; }
+  }
+```
 
-> 🧭 Go’s philosophy: “Composition over inheritance, simplicity over abstraction.”
+**Go (Golang)**  
 
-## 4. 🧰 General Best Practices
+- No classes. Use `struct` to model data and functions with receivers to attach behavior
+- Example:
 
-- 🧭 Follow Go naming conventions:
+```go
+  type Person struct {
+    Name string
+  }
 
-  - Exported names **start with capital letters**.
+  func (p *Person) GetName() string {
+    return p.Name
+  } 
+```
 
-  - Keep names **short and descriptive**.
+---
 
-- 📂 Organize code by **domain/package**, not layers.
+### Inheritance
 
-- 🧪 Always test! Use `testing` package and keep tests in `*_test.go` files.
+**Java (OOP)**  
 
-- ⚙️ Use `go fmt`, `go vet`, and `golangci-lint`.
+- Core mechanism for reuse and polymorphism
+- Example:
 
-## 📘 Detailed Contents
+```java
+  class Employee extends Person {
+    private String role;
+  }
+```
 
-- [**💡 Key Mental Shifts**](./01_key-mental-shifts.md)
-- [**🧰 Pro Tips for Writing Idiomatic Go**](./02_pro-tips-for-writing-idiomatic-go.md)
-- [**🚧 Common Pitfalls for OOP Developers**](./03_pro-tips-for-writing-idiomatic-go.md)
-- [**🧭 Migration Checklist — From Java (OOP) to Go 🦫**](./04_migration-checklist--from-java-oop-to-go.md)
-- [**📚 References & Further Reading**](./05_references-further-reading.md)
+**Go (Golang)**  
+
+- No inheritance. Use composition and interfaces instead
+- Example:
+
+```go
+type Employee struct {
+  Person
+  Role string
+}
+```
+
+---
+
+### Interfaces
+
+**Java (OOP)**  
+
+- Declared explicitly with implements
+- Example:
+
+```java
+  interface Speaker {
+    void speak();
+  }
+
+  class Person implements Speaker {
+    public void speak() { System.out.println("Hello!"); }
+  }
+```
+
+**Go (Golang)**  
+
+- Implicit implementation: any type that has the required methods satisfies the interface
+- Example:
+
+```go
+  type Speaker interface {
+    Speak()
+  }
+
+  type Person struct {}
+
+  func (p Person) Speak() {
+    fmt.Println("Hello!")
+  }
+```
+
+---
+
+### Access Modifiers
+
+**Java (OOP)**  
+
+- public, private, protected keywords
+
+**Go (Golang)**  
+
+- Simplicity: Capitalized = exported (public), lowercase = unexported (private)
+- Example:
+
+```go
+  type Person struct {
+    Name string  // exported
+    age  int     // unexported
+  }
+```
+
+---
+
+### Constructors
+
+**Java (OOP)**  
+
+- Defined by the name of the class
+- Example:
+
+```java
+  class Person {
+    private String name;
+
+    public Person(String name) {
+      this.name = name;
+    }
+  }
+```
+
+**Go (Golang)**  
+
+- Use factory functions to initialize structs
+- Example:
+
+```go
+  type Person struct {
+    Name string
+  }
+
+  func NewPerson(name string) *Person {
+    return &Person{Name: name}
+  }
+```
+
+---
+
+### Annotations / Reflection
+
+**Java (OOP)**  
+
+- Commonly used for frameworks (e.g., `@Autowired`, `@Entity`)
+- Example:
+
+```java
+  @Entity
+  class Person {
+    @Id
+    private int id;
+  }
+```
+
+**Go (Golang)**  
+
+- Rarely used; prefer explicit configuration
+- Example:
+
+```go
+  type Person struct {
+    ID int `json:"id"` // struct tags for JSON or DB mapping
+  }
+```
+
+---
+
+### Exceptions
+
+**Java (OOP)**  
+
+- Error handling via `try/catch`
+- Example:
+
+```java
+  try {
+    int result = divide(10, 0);
+  } catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero");
+  }
+```
+
+**Go (Golang)**  
+
+- No exceptions; handle errors via explicit return values
+- Example:
+
+```go
+  func divide(a, b int) (int, error) {
+    if b == 0 {
+      return 0, fmt.Errorf("cannot divide by zero")
+    }
+    return a / b, nil
+  }
+
+  result, err := divide(10, 0)
+  if err != nil {
+    fmt.Println(err)
+  }
+```
+
+---
+
+### Framework-driven
+
+**Java (OOP)**  
+
+- Heavy reliance on frameworks (Spring, Hibernate, etc.)
+
+**Go (Golang)**  
+
+- Prefers libraries + composition, not frameworks
+- Example:
+
+```go
+  // No heavy frameworks, just libraries for routing and DB
+  r := gin.Default()
+  r.GET("/users", getUsersHandler)
+```
+
+---
+
+### Generics
+
+**Java (OOP)**  
+
+- Widely used with collections (`List<T>`, `Map<K,V>`)
+- Example:
+
+```java
+  List<String> names = new ArrayList<>();
+```
+
+**Go (Golang)**  
+
+- Supported since 1.18; encourages simple concrete types when possible
+- Example:
+
+```go
+  func MapSlice[T any](items []T, fn func(T) T) []T {
+    var result []T
+    for _, item := range items {
+      result = append(result, fn(item))
+    }
+    return result
+  }
+```
+
+---
+
+### Dependency Injection
+
+**Java (OOP)**  
+
+- Automated by frameworks (Spring DI)
+
+**Go (Golang)**  
+
+- Manual DI via constructors or function parameters
+- Example:
+
+```go
+  type Service struct {
+    Repo Repository
+  }
+
+  func NewService(repo Repository) *Service {
+    return &Service{Repo: repo}
+  }
+```
+
+---
+
+### Multithreading / Concurrency
+
+**Java (OOP)**  
+
+- Threads, executors, futures, Virtual Threads
+- Example:
+
+```java
+  ExecutorService executor = Executors.newFixedThreadPool(2);
+  executor.submit(() -> System.out.println("Running in parallel"));
+```
+
+**Go (Golang)**  
+
+- Lightweight goroutines and channels for concurrency
+- Example:
+
+```go
+  go func() {
+    fmt.Println("Running in parallel")
+  }()
+```
