@@ -12,7 +12,6 @@ plugins:
 
 # Appearance
 color_scheme: light
-color_mode_toggle: true
 search_enabled: true
 heading_anchors: true
 

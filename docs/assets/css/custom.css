@@ -91,15 +91,6 @@ pre code {
   border-left: 4px solid #f97316;
 }
 
-[data-theme="dark"] body {
-  color: #e5e7eb;
-}
-
-[data-theme="dark"] .side-bar {
-  background-color: #020617;
-  border-right: 1px solid #1e293b;
-}
-
 /* ===============================
    Docs Cards – clickable cards
    =============================== */
@@ -122,10 +113,6 @@ pre code {
   z-index: 1;
 }
 
-.docs-card .anchor-heading {
-  pointer-events: none;
-}
-
 /* garante que texto fique acima visualmente,
    mas o link capture o clique */
 .docs-card > *:not(.docs-card-link) {
@@ -138,8 +125,8 @@ pre code {
   padding: 1.5rem;
   border-radius: 8px;
 
-  background-color: var(--jtd-background-color);
-  border: 1px solid var(--jtd-border-color);
+  background-color: #fdfdfd;
+  border: 2px solid #fdfdfd;
 
   text-decoration: none;          /* remove underline do <a> */
   color: inherit;
@@ -173,22 +160,4 @@ pre code {
 .docs-card:focus-visible {
   outline: 2px solid #2563eb;
   outline-offset: 2px;
-}
-
-/* ===============================
-   Dark mode
-   =============================== */
-
-[data-theme="dark"] .docs-card {
-  background-color: #020617;
-  border-color: #1e293b;
-}
-
-[data-theme="dark"] .docs-card p {
-  color: #94a3b8;
-}
-
-[data-theme="dark"] .docs-card:hover {
-  border-color: #38bdf8;
-  box-shadow: 0 4px 18px rgba(56, 189, 248, 0.15);
 }
