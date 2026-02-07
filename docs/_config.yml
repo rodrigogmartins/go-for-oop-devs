@@ -1,18 +1,30 @@
 # Site settings
-title: Go for OOP Devs
-description: Documentation for the OOP Devs that are starting to work with Go
+title: Go for OOP Developers
+description: A practical guide for developers migrating from Object-Oriented Programming to Go
 
-# Use remote theme instead of local gem
+url: https://rodrigogmartins.github.io
+baseurl: /go-for-oop-devs
+
+# Theme
 remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-remote-theme
 
-# Color mode settings
-enable_dark_mode: true
-color_scheme: dark
-color_mode_toggle: true
+# Appearance
+color_scheme: light
+search_enabled: true
+heading_anchors: true
 
-# Just the Docs specific settings
-just_the_docs:
-  sidebar:
-    navigation: "_sidebar.md"
+# Navigation
+nav_sort: case_insensitive
+
+# Footer
+footer_content: >
+  Go for OOP Developers — Documentation for developers transitioning from OOP to Go.
+
+# Header links
+aux_links:
+  "GitHub Repository":
+    - "https://github.com/rodrigogmartins/go-for-oop-devs"
+
+aux_links_new_tab: true
