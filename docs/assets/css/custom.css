@@ -100,40 +100,49 @@ pre code {
   border-right: 1px solid #1e293b;
 }
 
-.doc-cards {
+/* ===============================
+   Docs Cards (Docker-style)
+   =============================== */
+
+.docs-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.5rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-.doc-card {
-  display: block;
-  padding: 1.25rem;
-  border: 1px solid #e5e7eb;
+.docs-card {
+  background-color: var(--jtd-background-color);
+  border: 1px solid var(--jtd-border-color);
   border-radius: 8px;
-  background-color: #ffffff;
-  color: #111827;
-  text-decoration: none;
-  transition: all 0.15s ease;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
 }
 
-.doc-card h3 {
-  margin-top: 0;
-  margin-bottom: 0.4rem;
-  font-size: 1.1rem;
-}
-
-.doc-card p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #4b5563;
-}
-
-.doc-card:hover {
-  border-color: #2563eb;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+.docs-card:hover {
+  border-color: #1d63ff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   transform: translateY(-2px);
+}
+
+.docs-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+.docs-card p {
+  margin-bottom: 1rem;
+  color: #4a5568;
+}
+
+.docs-card a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.docs-card a:hover {
+  text-decoration: underline;
 }
 
 [data-theme="dark"] .doc-card {

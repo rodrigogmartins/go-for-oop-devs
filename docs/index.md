@@ -1,5 +1,5 @@
 ---
-title: Go for OOP Developers
+title: Overview
 nav_order: 0
 ---
 
@@ -40,24 +40,46 @@ Use this documentation as a **reference guide** and a **conceptual map** while t
 
 ## 📚 Documentation Overview
 
-<div class="doc-cards">
-  <a class="doc-card" href="/conceptual-shifts/">
-    <h3>🔄 Conceptual shifts</h3>
-    <p>Differences between classic OOP and Go’s design philosophy</p>
-  </a>
+<div class="docs-cards">
 
-  <a class="doc-card" href="/pro-tips/">
-    <h3>🧰 Idiomatic Go Pro Tips</h3>
-    <p>Best practices, design choices, and common pitfalls.</p>
-  </a>
+<div class="docs-card">
 
-  <a class="doc-card" href="/common-pitfalls/">
-    <h3>🚧 Common Pitfalls</h3>
-    <p>Common mistakes developers make when bringing OO habits into Go code.</p>
-  </a>
+### 🔄 Conceptual Shifts
 
-  <a class="doc-card" href="/migration-checklist/">
-    <h3>🧭 Migration Checklist</h3>
-    <p>From Java OOP to Go — mindset, architecture, and patterns.</p>
-  </a>
+Differences between classic OOP and Go’s design philosophy.
+
+[Read more →](conceptual-shifts)
+
+</div>
+
+<div class="docs-card">
+
+### 🧰 Idiomatic Go Pro Tips
+
+Best practices, design choices, and common pitfalls.
+
+[Read more →](pro-tips)
+
+</div>
+
+<div class="docs-card">
+
+### 🚧 Common Pitfalls
+
+Common mistakes developers make when bringing OO habits into Go code.
+
+[Read more →](common-pitfalls)
+
+</div>
+
+<div class="docs-card">
+
+### 🧭 Migration Checklist
+
+From Java OOP to Go — mindset, architecture, and patterns.
+
+[Read more →](migration-checklist)
+
+</div>
+
 </div>
