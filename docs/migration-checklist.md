@@ -1,5 +1,5 @@
 ---
-title: Migration Checklist — Java (OOP) → Go
+title: Migration Checklist
 nav_order: 4
 ---
 

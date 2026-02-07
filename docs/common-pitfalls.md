@@ -1,5 +1,5 @@
 ---
-title: Common Pitfalls for OOP Developers
+title: Common Pitfalls
 nav_order: 3
 ---
 
