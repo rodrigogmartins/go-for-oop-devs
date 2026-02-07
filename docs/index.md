@@ -42,44 +42,24 @@ Use this documentation as a **reference guide** and a **conceptual map** while t
 
 <div class="docs-cards">
 
-<div class="docs-card">
+  <a class="docs-card" href="conceptual-shifts">
+    <h3>🔄 Conceptual Shifts</h3>
+    <p>Differences between classic OOP and Go’s design philosophy.</p>
+  </a>
 
-### 🔄 Conceptual Shifts
+  <a class="docs-card" href="pro-tips">
+    <h3>🧰 Idiomatic Go Pro Tips</h3>
+    <p>Best practices, design choices, and common pitfalls.</p>
+  </a>
 
-Differences between classic OOP and Go’s design philosophy.
+  <a class="docs-card" href="common-pitfalls">
+    <h3>🚧 Common Pitfalls</h3>
+    <p>Common mistakes developers make when bringing OO habits into Go code.</p>
+  </a>
 
-[Read more →](conceptual-shifts)
-
-</div>
-
-<div class="docs-card">
-
-### 🧰 Idiomatic Go Pro Tips
-
-Best practices, design choices, and common pitfalls.
-
-[Read more →](pro-tips)
-
-</div>
-
-<div class="docs-card">
-
-### 🚧 Common Pitfalls
-
-Common mistakes developers make when bringing OO habits into Go code.
-
-[Read more →](common-pitfalls)
-
-</div>
-
-<div class="docs-card">
-
-### 🧭 Migration Checklist
-
-From Java OOP to Go — mindset, architecture, and patterns.
-
-[Read more →](migration-checklist)
-
-</div>
+  <a class="docs-card" href="migration-checklist">
+    <h3>🧭 Migration Checklist</h3>
+    <p>From Java OOP to Go — mindset, architecture, and patterns.</p>
+  </a>
 
 </div>
