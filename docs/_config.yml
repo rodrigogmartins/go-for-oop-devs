@@ -10,10 +10,6 @@ remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-remote-theme
 
-just_the_docs:
-  custom_css:
-    - /assets/css/custom.css
-
 # Appearance
 color_scheme: light
 color_mode_toggle: true
