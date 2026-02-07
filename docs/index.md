@@ -38,7 +38,7 @@ Use this documentation as a **reference guide** and a **conceptual map** while t
 
 ## 📚 Documentation Overview
 
-- [**🔄 Conceptual Shifts**](/conceptual-shifts)
-- [**🧰 Idiomatic Go Pro Tips**](/pro-tips)
-- [**🚧 Common Pitfalls**](/common-pitfalls)
-- [**🧭 Migration Checklist**](/migration-checklist)
+- [**🔄 Conceptual Shifts**](/go-for-oop-devs/conceptual-shifts)
+- [**🧰 Idiomatic Go Pro Tips**](/go-for-oop-devs/pro-tips)
+- [**🚧 Common Pitfalls**](/go-for-oop-devs/common-pitfalls)
+- [**🧭 Migration Checklist**](/go-for-oop-devs/migration-checklist)
