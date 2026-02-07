@@ -122,6 +122,10 @@ pre code {
   z-index: 1;
 }
 
+.docs-card .anchor-heading {
+  pointer-events: none;
+}
+
 /* garante que texto fique acima visualmente,
    mas o link capture o clique */
 .docs-card > *:not(.docs-card-link) {
