@@ -1,0 +1,148 @@
+body {
+  color: #111827;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+h1, h2, h3, h4 {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.3rem;
+  margin-top: 2.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.side-bar {
+  background-color: #f9fafb;
+  border-right: 1px solid #e5e7eb;
+}
+
+.side-bar a {
+  color: #111827;
+  font-weight: 500;
+}
+
+.side-bar a:hover {
+  color: #2563eb;
+}
+
+.nav-list .active {
+  background-color: transparent;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.site-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111827;
+  letter-spacing: 0.02em;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  max-width: 900px;
+}
+
+code {
+  background-color: #f3f4f6;
+  padding: 0.15em 0.3em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+pre code {
+  background-color: #0f172a;
+  color: #e5e7eb;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.note {
+  background-color: #eff6ff;
+  border-left: 4px solid #2563eb;
+}
+
+.warning {
+  background-color: #fff7ed;
+  border-left: 4px solid #f97316;
+}
+
+[data-theme="dark"] body {
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .side-bar {
+  background-color: #020617;
+  border-right: 1px solid #1e293b;
+}
+
+.doc-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.doc-card {
+  display: block;
+  padding: 1.25rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #111827;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.doc-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+}
+
+.doc-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+.doc-card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .doc-card {
+  background-color: #020617;
+  border-color: #1e293b;
+  color: #e5e7eb;
+}
+
+[data-theme="dark"] .doc-card p {
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .doc-card:hover {
+  border-color: #38bdf8;
+}

@@ -1,9 +1,9 @@
 ---
-title: Pro Tips for Writing Idiomatic Go
+title: Idiomatic Go Pro Tips
 nav_order: 2
 ---
 
-# Pro Tips for Writing Idiomatic Go
+# Idiomatic Go Pro Tips
 
 This section highlights **practical guidelines** to help developers coming from Object-Oriented languages write Go code that feels **natural, simple, and maintainable**.
 
